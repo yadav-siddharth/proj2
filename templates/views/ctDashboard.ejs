@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style7.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="col-md-8">
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Full Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <!-- Kenneth Valdez -->
+                        <span>
+                            <%= (typeof fname !="undefined" ? fname : "" ) %>
+                        </span>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <!-- fip@jukmuh.al -->
+                        <span>
+                            <%= (typeof email !="undefined" ? email : "" ) %>
+                        </span>
+                    </div>
+                </div>
+          
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Mobile</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <!-- (320) 380-4539 -->
+                        <span>
+                            <%= (typeof mobile !="undefined" ? mobile : "" ) %>
+                        </span>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Address</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <!-- Bay Area, San Francisco, CA -->
+                        <span>
+                            <%= (typeof address !="undefined" ? address : "" ) %>
+                        </span>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <a class="btn btn-info " target="__blank" href="/editProfile">Edit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row gutters-sm">
+            <div class="col-sm-6 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                       <center>
+                        <h4>Booking history:</h4>
+                    </center>
+                        <ul>
+                            <li><span> <%= (typeof time !="undefined" ? time : "" ) %>
+                                <%= (typeof slotArray !="undefined" ? slotArray : "" ) %>
+                            </span>
+                            <br>
+                            <span><%= (typeof ctName !="undefined" ? ctName : "" ) %>
+                                <%= (typeof ctEmail !="undefined" ? ctEmail : "" ) %>
+                            </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+
+
+    </div>
+</body>
+</html>

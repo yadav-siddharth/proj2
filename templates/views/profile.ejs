@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style5.css">
+</head>
+<body>
+    <%- include('header.ejs') %>
+    <center>
+    <div class="top">h</div>
+    <form action="/profile" method="post" enctype="multipart/form-data">
+        <label for="">First name: </label>
+        <input type="text" name="fname" id="" placeholder="First Name" required/>
+        <br> <br>
+        <label for="">Last name: </label>
+        <input type="text" name="lname" id="" placeholder="Last Name" required/>
+        <br> <br>
+        <label for="">Email: </label>
+        <input type="email" name="email" id="">
+        <br> <br>
+        <label for="">Address: </label>
+        <br> <br>
+        <textarea name="address" id="" cols="30" rows="10" required></textarea>
+        <br> <br>
+        <label for="">Pincode: </label>
+        <input type="number" name="pincode" id="" required>
+        <br> <br>
+        <input type="file" name="profile-file" required/>
+        <br> <br>
+        <span style="color: red;">
+            <%= (typeof message !="undefined" ? message : "" ) %>
+          </span>
+        <input type="submit" value="Submit" />
+
+    </form>
+</center>
+</body>
+</html>

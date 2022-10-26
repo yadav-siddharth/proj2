@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- images -->
+    <link href="images/favicon.png" rel="icon">
+    <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- google font -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- css -->
+    <!-- <link href="css/all.min.css" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/boxicons.min.css" rel="stylesheet">
+    <link href="css/glightbox.min.css" rel="stylesheet">
+    <link href="css/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"> -->
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+        <!-- google font -->
+    <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+<!-- css -->
+<link href="css/all.min.css" rel="stylesheet">
+<link href="css/aos.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap-icons.css" rel="stylesheet">
+<link href="css/boxicons.min.css" rel="stylesheet">
+<link href="css/glightbox.min.css" rel="stylesheet">
+<link href="css/swiper-bundle.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .main {
+            padding: 0px 50px;
+        }
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .container .box {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+
+        .container .box .box-cell.box1 {
+            background: green;
+            color: white;
+            text-align: justify;
+        }
+
+        .container .box .box-cell.box2 {
+            background: lightgreen;
+            text-align: justify
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .info {
+            padding: 0px 50px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <%- include('header.ejs') %>
+
+    <div class="main" style="margin-top: 118px;">
+        <section id="hero" style="margin-top: 110px;">
+            <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+                <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+                <div class="carousel-inner" role="listbox">
+
+                    <!-- Slide 1 -->
+                    <div class="containers">
+                        <div class="carousel-item active"
+                            style="background-image: url(images/slide/carousel.jpg)">
+                            <div class="centered">
+                                <h1>Health Checkups</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <!-- <div class="carousel-item" style="background-image: url(images/slide/hc.jpeg)"> -->
+
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-item" style="background-image: url(images/slide/slide4.jpg)">
+                    </div>
+
+                </div>
+
+                <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+                </a>
+
+                <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+                </a>
+
+            </div>
+        </section>
+
+        <hr>
+
+        <div class="main">
+            <center>
+                <h1>Health Checkups</h1>
+            </center>
+
+            <p>
+                Regular health check-ups can identify any early signs of health issues. Finding problems early means
+                that your chances for effective treatment are increased.
+
+                Many factors, such as your age, health, family history and lifestyle choices, impact on how often you
+                need check-ups.
+            </p>
+
+            <br><br>
+            <center>
+                <h3>
+                    Why regular health checks are important?
+                </h3>
+            </center>
+
+            <p>
+                It is a good idea to visit a doctor regularly, even if you feel healthy. The purpose of these visits is
+                to:
+
+            <ul>
+                <li>check for current or emerging medical problems</li>
+                <li>assess your risk of future medical issues</li>
+                <li>prompt you to maintain a healthy lifestyle</li>
+                <li>update vaccinations</li>
+
+            </ul>
+
+            </p>
+
+            <center>
+                <h3>Next health checkup campaign</h3>
+            </center>
+            <form action="/trial" method="post">
+                <p>Hospital:</p>
+                <ol>
+                    <li>
+                        <p>Jupiter Hospital, Thane</p>
+                        <p>Address: Service Rd, Eastern Express Hwy, next to Viviana Mall, Thane, Maharashtra 400601</p>
+                        <div>
+                            <iframe style="border:0; width: 50%; height: 150px;"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.9833476337612!2d72.83367151465059!3d19.064469757289515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c91130392c07%3A0x3c47bf391c8de931!2sThadomal%20Shahani%20Engineering%20College!5e0!3m2!1sen!2sin!4v1662281815697!5m2!1sen!2sin"
+                                frameborder="0"></iframe>
+                        </div>
+
+                        <script type="text/javascript">
+                            window.onload = function () {
+                                var today = new Date().toISOString().split('T')[0];
+                                document.getElementsByName("setTodaysDate")[0].setAttribute('min', today);
+                            }
+
+                        </script>
+                        <input type="date" step="7" name="setTodaysDate">
+                        <span style="color: red;">
+                            <%= (typeof time !="undefined" ? time : "" ) %>
+                        </span>
+                        <br>
+                        <br>
+                        <input type="submit" name="hospital" value="Jupiter"/>
+                        <span style="color: green;">
+                            <%= (typeof success !="undefined" ? success : "" ) %>
+                        </span>
+                        <input type="text" name="hosp" value="Jupiter" style="visibility: hidden;" />
+                        <br>
+                        <br><br>
+                    </li>
+
+                    <li>
+                        <p> Lilavati Hospital, Mumbai </p>
+                        <p>Address: A-791, A-791, Bandra Reclamation Rd, General Arunkumar Vaidya Nagar, Bandra West,
+                            Mumbai, Maharashtra 400050</p>
+                   
+
+                    <div>
+                        <iframe style="border:0; width: 50%; height: 150px;"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.9833476337612!2d72.83367151465059!3d19.064469757289515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c91130392c07%3A0x3c47bf391c8de931!2sThadomal%20Shahani%20Engineering%20College!5e0!3m2!1sen!2sin!4v1662281815697!5m2!1sen!2sin"
+                            frameborder="0"></iframe>
+                    </div>
+
+                    <script type="text/javascript">
+                        window.onload = function () {
+                            var today = new Date().toISOString().split('T')[0];
+                            document.getElementsByName("setTodaysDate")[0].setAttribute('min', today);
+                        }
+
+                    </script>
+                    <input type="date" step="7" name="setTodaysDate">
+                    <span style="color: red;">
+                        <%= (typeof time !="undefined" ? time : "" ) %>
+                    </span>
+                    <br>
+                    <br>
+                    <input type="submit" name="hospital" value="Leelavati"/>
+                    <span style="color: green;">
+                        <%= (typeof success !="undefined" ? success : "" ) %>
+                    </span>
+                    <input type="text" name="hosp" value="Leelavati" style="visibility: hidden;" />
+                    <br>
+                    <br><br>
+                </li>
+                </ol>
+
+            </form>
+        </div>
+
+    </div>
+
+    <script src="js/aos.js"></script>
+        <script src="js/purecounter_vanilla.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/glightbox.min.js"></script>
+        <script src="js/validate.js"></script>
+        <script src="js/swiper-bundle.min.js"></script>
+        <script src="js/main.js"></script>
+
+        <hr>
+</body>
+
+</html>

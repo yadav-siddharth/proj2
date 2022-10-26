@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    section {
+      margin-top: 110px;
+    }
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .root {
+      background-color: rgba(147, 116, 147, 0.629);
+    }
+
+    .imageSize {
+      width: 100%;
+      /* height: auto; */
+      height: 250px;
+      /* position: relative; */
+    }
+  </style>
+</head>
+
+<body>
+  <%- include('header.ejs') %>
+    <main class="root">
+
+      <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <!-- <h1 class="fw-light" style="color: white;">Age Care</h1> -->
+            <p style="color: white;">Search caretakers based on their charges</p>
+            <p>
+              <!-- <form class="d-flex" role="search"> -->
+              <!-- <input class="form-control me-2" type="search" placeholder="Find Your Care Taker"
+                aria-label="Search">&ensp;
+              <button class="btn btn-dark" type="submit">GO</button> -->
+              <!-- </form><br> -->
+              <!-- <br> -->
+            <form action="/caretakers" method="post">
+              <input class="btn btn-outline-dark" type="submit" name="one" value="    Charge less than Rs60    " />
+              <br>
+              <br>
+              <input class="btn btn-outline-dark" type="submit" name="two" value="Charge greater than Rs60" />
+            </form>
+
+            <!-- <input class="btn btn-outline-dark" type="submit" name="one" value="one" /> -->
+
+
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <% records.forEach(function(row) { %>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <div>
+                    <!-- <img src="siddh.jpg" alt="" width="100%"/> -->
+                    <img src="<%= row.fname %>.jpg" alt="" class="imageSize" />
+
+                    <!-- <p><%= row.fname %></p> -->
+                  </div>
+
+                  <div class="card-body">
+                    <table>
+                      <p class="card-text">Name:
+                        <%= (typeof row.fname !="undefined" ? row.fname : "" ) %><br>
+                          Age: <%= (typeof row.lname !="undefined" ? row.lname : "" ) %> <br>
+                            Email: <%= (typeof row.email !="undefined" ? row.email : "" ) %> <br>
+                              Experience: <%= (typeof row.experience !="undefined" ? row.experience : "" ) %> <br>
+                                Age: <%= (typeof row.age !="undefined" ? row.age : "" ) %>
+                                  <br>
+                                  Charge: Rs. <%= (typeof row.charge !="undefined" ? row.charge : "" ) %>
+                                    <br>
+                                    Slot: <%= (typeof row.slot !="undefined" ? row.slot : "" ) %>
+                      </p>
+                    </table>
+
+
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <form action='/caretakerBook' method="post">
+                          <input type="text" name="n" id="" style="visibility: hidden;" value=<%=row.email %>
+                          <br>
+                          <br>
+                          <input type="submit" class="btn btn-sm btn-outline-secondary" value="Book"
+                            name="ctName"></input>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <% }) %>
+
+          </div>
+
+
+    </main>
+
+    
+</body>
+
+</html>

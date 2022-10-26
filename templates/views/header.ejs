@@ -28,26 +28,24 @@
 
 </head>
 <body>
-    <header id="header" class="fixed-top">
-        <div class="container d-flex align-items-center">
-    
-          <a href="index.html" class="logo me-auto"><img src="images/logo1.png" alt=""><span style="color: #444444;"> Assisto</span></a>
-          <!-- Uncomment below if you prefer to use an image logo -->
-          <!-- <h1 class="logo me-auto"><a href="index.html">Medicio</a></h1> -->
-    
-          <nav id="navbar" class="navbar order-last order-lg-0">
+  <!-- <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+      
+      <a href="#" class="logo me-auto"><img src="images/logo1.png" alt=""><span style="color: #444444;"> Assisto</span></a>
+     
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto " href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          
+          <li><a class="nav-link scrollto" href="#doctors">Caregivers</a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="fa-solid fa-chevron-down"></i></a>
             <ul>
-              <li><a class="nav-link scrollto " href="#hero">Home</a></li>
-              <li><a class="nav-link scrollto" href="#about">About</a></li>
-              <li><a class="nav-link scrollto" href="#services">Services</a></li>
-              <!-- <li><a class="nav-link scrollto" href="#departments">Departments</a></li> -->
-              <li><a class="nav-link scrollto" href="#doctors">Caregivers</a></li>
-              <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="fa-solid fa-chevron-down"></i></a>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="fa-solid fa-chevron-down"></i></a>
                 <ul>
-                  <li><a href="#">Drop Down 1</a></li>
-                  <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="fa-solid fa-chevron-down"></i></a>
-                    <ul>
-                      <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 1</a></li>
                       <li><a href="#">Deep Drop Down 2</a></li>
                       <li><a href="#">Deep Drop Down 3</a></li>
                       <li><a href="#">Deep Drop Down 4</a></li>
@@ -62,13 +60,65 @@
               <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
-          </nav><!-- .navbar -->
+          </nav>
     
           <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Book a</span> Caregiver</a>
-          <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Sign-up / Login</span></a>
-    
+          <a href="/r" class="appointment-btn scrollto"><span class="d-none d-md-inline">Sign-up / Login</span></a>
+            
+          
         </div>
-      </header>
+      </header> -->
+
+
+
+      <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
+          
+          <a href="#" class="logo me-auto"><img src="images/logo.png" alt=""><span style="color: #444444;"> AgeCare</span></a>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <h1 class="logo me-auto"><a href="index.html">Medicio</a></h1> -->
+          
+          <nav id="navbar" class="navbar order-last order-lg-0">
+            <ul>
+              
+              <li><a class="nav-link scrollto " href="#hero">Home</a></li>
+              <li><a class="nav-link scrollto" href="#about">About</a></li>
+              <li><a class="nav-link scrollto" href="#services">Services</a></li>
+              <li><a class="nav-link scrollto" href="http://localhost:8000/about">New About</a></li>
+              <li>hi</li>
+              <!-- <li><a class="nav-link scrollto" href="#departments">Departments</a></li> -->
+              <li><a class="nav-link scrollto" href="/caretakers">Caregivers</a></li>
+              <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="fa-solid fa-chevron-down"></i></a>
+                <ul>
+                  <li><a href="/userProfile">Profile</a></li>
+                  <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul>
+                      <li><a href="/userProfile">Profile</a></li>
+                      <li><a href="/admin">Admin</a></li>
+                          <li><a href="#">Deep Drop Down 3</a></li>
+                          <li><a href="#">Deep Drop Down 4</a></li>
+                          <li><a href="#">Deep Drop Down 5</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Drop Down 2</a></li>
+                      <li><a href="#">Drop Down 3</a></li>
+                      <li><a href="#">Drop Down 4</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="nav-link scrollto" href="/prime">Prime</a></li>
+                  <span style="color: red;"><%= (typeof msg != "undefined" ? msg : "") %></span>
+                  <!-- <li>hi <%= (typeof names != "undefined" ? names : "") %></li> -->
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+              </nav><!-- .navbar -->
+        
+              <!-- <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Book a</span> Caregiver</a> -->
+              <a href="/logout" class="appointment-btn scrollto"><span class="d-none d-md-inline">Logout</span></a>
+              <a href="/register" class="appointment-btn scrollto"><span class="d-none d-md-inline">Sign-up / Login</span></a>
+              <p class="welcome"></p>
+              
+            </div>
+            <span style="font-weight: bolder; position: relative; left: 935px;">Welcome <%= (typeof name != "undefined" ? name : "") %></span>  
+          </header> 
 </body>
 </html>
-  

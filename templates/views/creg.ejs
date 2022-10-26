@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/style4.css">
+</head>
+<body>
+    <form action="/creg" method="post">
+    <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+        <div class="container">
+          <div class="card login-card">
+            <div class="row no-gutters">
+              <div class="col-md-5">
+                <img src="images/ct3.jpg" alt="login" class="login-card-img">
+                <p class="text-white font-weight-medium text-center flex-grow align-self-end footer-link text-small">
+                </p>
+              </div>
+    
+              <div class="col-md-7">
+                <div class="card-body">
+                  <div class="brand-wrapper">
+                    <img src="images/logo.png" alt="logo" class="logo">
+                  </div>
+                  <!-- <a href="/applicant" class="forgot-password-link">Apply For Being An Applicant !</a> -->
+                  <p class="login-card-description">Register your account</p>
+                  <!-- <form action="/" method='post'> -->
+                      <div class="form-group">
+                        <label for="text" class="sr-only" style="color: black;">First Name</label>
+                        <input type="text" name="fname" id="text" class="form-control" placeholder="Fist Name" >
+                      </div>
+                      <div class="form-group">
+                        <label for="text" class="sr-only" style="color: black;">Last Name</label>
+                        <input type="text" name="lname" id="text" class="form-control" placeholder="Last Name" >
+                      </div>
+                      <div class="form-group">
+                        <label for="email" class="sr-only" style="color: black;">Email</label>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Email address" >
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="password" class="sr-only">Password</label>
+                        <input type="password" name="password" id="password" class="form-control" placeholder="***********" >
+                      </div>
+                      <div class="form-group">
+                        <label for="radio" class="sr-only" style="color: black;">Gender</label>
+                        Gender:
+                        <br>
+                        <input type="radio" name="gender" id="email" value="Male"/> Male
+                        <input type="radio" name="gender" id="email" value="Female"/> Female
+                      </div>
+                      <div class="form-group">
+                        <label for="email" class="sr-only" style="color: black;">Age</label>
+                        <input type="number" name="age" id="email" class="form-control" placeholder="Age" >
+                      </div>
+                      <div class="form-group">
+                        <label for="experience" class="sr-only" style="color: black;">Experience</label>
+                        <input type="number" name="experience" id="email" class="form-control" placeholder="Experience in years" >
+                      </div>
+                      <span style="color: red;"><%= (typeof message != "undefined" ? message : "") %></span>
+             
+                <span style="color: red;"><%= (typeof fields != "undefined" ? fields : "") %></span>
+                <span style="color: red;"><%= (typeof error != "undefined" ? error : "") %></span>
+                      <input name="login" id="login" class="btn btn-block login-btn mb-4" type="submit" value="Register">
+                    <!-- </form> -->
+                    <!-- <p class="login-card-footer-text">Have an account? <a href="/l" class="text-reset">Jump To Login</a></p> -->
+            
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+</form>
+</body>
+</html>

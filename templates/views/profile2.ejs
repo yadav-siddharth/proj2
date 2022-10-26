@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .entire {
+            margin-left: 150px;
+            margin-top: 110px;
+            margin-right: 100px;
+            /* scroll- */
+            /* overflow-x: hidden; */
+        }
+
+        .images {
+            /* display: inline-block; */
+            margin-top: 20px;
+            display: inline-flex;
+
+        }
+
+        .intro {
+            color: black;
+            display: inline;
+            /* position: relative;
+            padding-left: 320px;
+            bottom: 120px; */
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('header.ejs') %>
+
+        <div class="entire">
+            <div class="images">
+                <img src="<%= (typeof message != 'undefined' ? message : '' ) %>" alt="Image"
+                    style="width:200px; border-radius: 50%;">
+            </div>
+
+            <div class="intro">
+                <h2>
+                    Name: <%= (typeof name !='undefined' ? name : '' ) %>
+                        <br><br>
+                        Email: <%= (typeof email !='undefined' ? email : '' ) %>
+                            <br> <br>
+                            Address: <%= (typeof address!='undefined' ?address : '' ) %>
+                            <br> <br>
+                </h2>
+            </div>
+
+            <hr> <br> <br>
+            <div class="history">
+                <h4>Past bookings: </h4>
+            </div>
+        </div>
+</body>
+
+</html>

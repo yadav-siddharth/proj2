@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .cont {
+      /* max-width: 25%; */
+      margin-top: 110px;
+      /* margin-left: 400px; */
+    }
+
+
+    .imageSize {
+      width: 100%;
+      /* height: auto; */
+      height: 250px;
+      /* position: relative; */
+    }
+  </style>
+
+  <!-- <script>
+  var tomorrowDate = new Date().getDate()+1;
+console.log(tomorrowDate);
+</script> -->
+</head>
+
+<body>
+
+  <%- include('header.ejs') %>
+
+    <center>
+      <div class="cont">
+        <div class="album py-5 bg-light">
+          <div class="container">
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              <% records.forEach(function(row) { %>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <div>
+                      <!-- <img src="siddh.jpg" alt="" width="100%"/> -->
+                      <img src="<%= row.fname %>.jpg" alt="" class="imageSize" />
+
+                      <!-- <p><%= row.fname %></p> -->
+                    </div>
+
+                    <div class="card-body">
+                      <table>
+                        <center>
+                          <p class="card-text">Name:
+                            <%= (typeof row.fname !="undefined" ? row.fname : "" ) %><br>
+                              Age: <%= (typeof row.lname !="undefined" ? row.lname : "" ) %> <br>
+                                Email: <%= (typeof row.email !="undefined" ? row.email : "" ) %> <br>
+                                  Experience: <%= (typeof row.experience !="undefined" ? row.experience : "" ) %> <br>
+                                    Age: <%= (typeof row.age !="undefined" ? row.age : "" ) %>
+                                      <br>
+                                      Charge: Rs. <%= (typeof row.charge !="undefined" ? row.charge : "" ) %>
+                                        <br>
+                                        Slot: <%= (typeof row.slot !="undefined" ? row.slot : "" ) %>
+                          </p>
+                          <br>
+                          <form action="finalBook" method="post">
+
+                            <p>Book the slots:</p>
+                            <input type="checkbox" name="cone" value="9-12am">
+                            <label for="">9-12pm</label>
+
+                            <br>
+
+                            <input type="checkbox" name="ctwo" value="12-3pm">
+                            <label for="">12-3pm</label>
+
+                            <br>
+
+                            <input type="checkbox" name="cthree" value="3-6pm">
+                            <label for="">3-6pm</label>
+
+                            <br>
+
+                            <input type="checkbox" name="cfour" value="6-9pm">
+                            <label for="">6-9pm</label>
+
+                            <br>
+                            <br>
+                            <p>Note that these slots are for tomorrow, i.e, <span id="time"></span></p>
+                            <!-- <p id="time"></p> -->
+                            <script>
+                              var currentDate = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
+                              var day = currentDate.getDate()
+                              var month = currentDate.getMonth() + 1
+                              var year = currentDate.getFullYear()
+                              var a = day + "/"+ month + "/" + year
+                              document.getElementById("time").innerHTML = a;
+                            </script>
+                            <br>
+                            <input type="text" name="email" id="" style="visibility: hidden;"
+                              value="<%= (typeof row.email != " undefined" ? row.email : "" )%>">
+                            <!-- <br> -->
+                            <span style="color: red;">
+                              <%= (typeof msg !="undefined" ? msg : "" ) %>
+                            </span>
+                            <br>
+                            <input type="submit" name="" id="" value="Book">
+                          </form>
+                        </center>
+                      </table>
+
+
+
+                      <% }) %>
+
+                    </div>
+
+                  </div>
+    </center>
+
+
+</body>
+
+</html>
